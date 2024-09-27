@@ -10,14 +10,20 @@ StrangeLand consists of several repositories that together form a comprehensive 
 This is the core repository of the StrangeLand system. It contains the foundational code and assets necessary to set up and run the VR driving simulations. Start here if you're new to the StrangeLand ecosystem.
 
 #### 2. [Docs-ReadMe](https://github.com/Strange-Land/Docs-ReadMe)
-This repository houses all the documentation related to the StrangeLand project. Here you can find detailed guides, API documentation, and more to help you navigate and utilize the various components of the StrangeLand system.
+This repository houses all the documentation related to the StrangeLand project. Here you can find detailed guides, and more to help you navigate and utilize the various components of the StrangeLand system.
+
+*Some Reportistries are still hosted on the originating labs Github*
+#### 3. [ReRun](https://github.com/FAR-Lab/Rerun)
+It is an addition to StrangeLand that can be used to record the various moving actors in a scene and play them back, facilitating inductive coding for the transpired interactions.
+#### 4. [Original Repository](https://github.com/FAR-Lab/CrossCulturalDriving)
+The simulator's original repository has a longer history and various issues trackers associated with it that were not migrated to the new StrangeLand-Base repository.
 
 ### Future Developments
 
 StrangeLand is continuously evolving. Our future plans for development are divided into two main areas:
 
 #### 1. Studies
-We aim to expand the cultural profiling capabilities of StrangeLand by incorporating more diverse driving scenarios and studying their effects in different cultural contexts. The goal is to make StrangeLand a universal tool for cross-cultural driving research.
+We aim to expand the cultural profiling capabilities of StrangeLand by incorporating more diverse driving scenarios, pedestrians, robots, and modern forms of transportation, to studying their effects on driving in different cultural contexts. The goal is to make StrangeLand a universal tool for multiparticipant interactin research moving beyond the traffic and driving context.
 
 #### 2. Technical Improvements
 Several enhancements are planned to improve the fidelity and usability of the StrangeLand system. These include better hand-tracking integration, more robust network performance, and the inclusion of additional real-world driving conditions to make the simulations even more realistic. For more details, visit our [Technical Improvements](https://github.com/Strange-Land/Docs-ReadMe/wiki/Technical-Improvments) page.
