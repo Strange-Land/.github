@@ -6,11 +6,11 @@ StrangeLand is a cutting-edge simulator designed to profile and understand human
 
 StrangeLand consists of several repositories that together form a comprehensive ecosystem for VR driving simulation and analysis. Below is a brief overview of each repository:
 
-#### 1. [StrangeLand-Base](https://github.com/Strange-Land/StrangeLand-Base/tree/development)
-This is the core repository of the StrangeLand system. It contains the foundational code and assets necessary to set up and run the VR driving simulations. Start here if you're new to the StrangeLand ecosystem.
-
-#### 2. [StrangeLandPackage](https://github.com/Strange-Land/StrangeLandPackage)
+#### 1. [StrangeLandPackage](https://github.com/Strange-Land/StrangeLandPackage)
 This Unity package contains the refactored core functionalities of StrangeLand. It is currently being used by several of our collaborators for various projects, and we are actively updating it throughout collaboration. You can find samples in the package manager to get started.
+
+#### 2. [StrangeLand-Base](https://github.com/Strange-Land/StrangeLand-Base/tree/development)
+This is the core repository of the StrangeLand system. It contains the foundational code and assets necessary to set up and run the VR driving simulations. Start here if you're new to the StrangeLand ecosystem.
 
 #### 3. [Docs-ReadMe](https://github.com/Strange-Land/Docs-ReadMe)
 This repository houses all the documentation related to the StrangeLand project. Here you can find detailed guides, and more to help you navigate and utilize the various components of the StrangeLand system.
