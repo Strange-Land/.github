@@ -9,6 +9,12 @@ StrangeLand consists of several repositories that together form a comprehensive 
 #### 1. [StrangeLandPackage](https://github.com/Strange-Land/StrangeLandPackage)
 This Unity package contains the refactored core functionalities of StrangeLand. It is currently being used by several of our collaborators for various projects, and we are actively updating it throughout collaboration. You can find samples in the package manager to get started.
 
+##### 1.1 Steering
+The **[StrangeLand Steering](https://github.com/Strange-Land/strangeland.steering)** package provides a hardware abstraction layer for steering wheels and driving input devices used in StrangeLand simulations. It exposes normalized inputs such as steering, throttle, brake, and common vehicle controls through the `SteeringWheelManager`, allowing vehicle controllers to remain independent of specific hardware SDKs. The package includes example integrations (e.g., Logitech wheels) and samples to test and debug input. Be sure to add the `SteeringWheelManager` to your `GameManagement` scene in Unity. 
+
+##### 1.2 Vehicle
+The **[StrangeLand Vehicle](https://github.com/Strange-Land/strangeland.vehicle)** package provides a reference vehicle implementation for StrangeLand. It includes a ready-to-use vehicle prefab with interior interaction elements, mirrors, audio, and a vehicle controller that integrates directly with the `SteeringWheelManager`. Importing the sample allows developers to quickly add a drivable vehicle to a scene and connect it to the StrangeLand interaction and spawning system while remaining fully extensible for custom vehicle setups.
+
 #### 2. [StrangeLand-Base](https://github.com/Strange-Land/StrangeLand-Base/tree/development)
 This is the core repository of the StrangeLand system. It contains the foundational code and assets necessary to set up and run the VR driving simulations. Start here if you're new to the StrangeLand ecosystem.
 
