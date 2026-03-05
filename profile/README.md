@@ -1,13 +1,15 @@
 ## Hi there 👋 Welcome to StrangeLand
 
-StrangeLand is a cutting-edge simulator designed to profile and understand human driving behavior across different cultures using a multi-participant virtual reality (VR) environment. As we transition to an era of autonomous vehicles, the ability to adapt to local driving norms becomes critical. StrangeLand aims to bridge this gap by providing a platform that captures and analyzes driving interactions, offering valuable insights for both researchers and developers.
+StrangeLand is a multi-participant simulator for studying human driving behavior and cultural interaction patterns in traffic, helping researchers and developers understand how driving norms vary across contexts and informing the design of future autonomous systems.
+
+**Recommended setup:** Start with the three core packages — [StrangeLandPackage (Core)](https://github.com/Strange-Land/StrangeLandPackage), [StrangeLand Steering](https://github.com/Strange-Land/strangeland.steering), and [StrangeLand Vehicle](https://github.com/Strange-Land/strangeland.vehicle), which together provide the simulator framework, steering hardware integration, and a ready-to-use reference vehicle.
 
 ### Repositories
 
 StrangeLand consists of several repositories that together form a comprehensive ecosystem for VR driving simulation and analysis. Below is a brief overview of each repository:
 
 #### 1. [StrangeLandPackage](https://github.com/Strange-Land/StrangeLandPackage)
-This Unity package contains the refactored core functionalities of StrangeLand. It is currently being used by several of our collaborators for various projects, and we are actively updating it throughout collaboration. You can find samples in the package manager to get started.
+This Unity package contains the refactored core functionalities of StrangeLand. It is currently being used by several of our collaborators for various projects, and we are actively updating it throughout the collaboration. You can find samples in the package manager to get started.
 
 ##### 1.1 Steering
 The **[StrangeLand Steering](https://github.com/Strange-Land/strangeland.steering)** package provides a hardware abstraction layer for steering wheels and driving input devices used in StrangeLand simulations. It exposes normalized inputs such as steering, throttle, brake, and common vehicle controls through the `SteeringWheelManager`, allowing vehicle controllers to remain independent of specific hardware SDKs. The package includes example integrations (e.g., Logitech wheels) and samples to test and debug input. Be sure to add the `SteeringWheelManager` to your `GameManagement` scene in Unity. 
