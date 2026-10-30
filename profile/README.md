@@ -1,46 +1,95 @@
-## Hi there 👋 Welcome to StrangeLand
+# StrangeLand
 
-StrangeLand is a multi-participant simulator for studying human driving behavior and cultural interaction patterns in traffic, helping researchers and developers understand how driving norms vary across contexts and informing the design of future autonomous systems.
+**Open-source tools for studying how people interact with each other and with robots and automated vehicles: several people at once, in the lab and in real places.**
 
-**Recommended setup:** Start with the three core packages — [StrangeLandPackage (Core)](https://github.com/Strange-Land/StrangeLandPackage), [StrangeLand Steering](https://github.com/Strange-Land/strangeland.steering), and [StrangeLand Vehicle](https://github.com/Strange-Land/strangeland.vehicle), which together provide the simulator framework, steering hardware integration, and a ready-to-use reference vehicle.
+StrangeLand puts several participants (drivers, pedestrians, cyclists, operators of robots) into the same virtual scene over a network, so they respond to each other in real time. It runs on consumer VR headsets and ordinary PCs, and a full setup fits in checked luggage, which is why research groups on three continents have been able to run the same studies in different places.
 
-### Repositories
+🌐 **Project site:** [strangelandcommons.org](https://strangelandcommons.org) · 📖 **Docs:** [strangeland.io](https://strangeland.io) · ✉️ hello@strangelandcommons.org
 
-StrangeLand consists of several repositories that together form a comprehensive ecosystem for VR driving simulation and analysis. Below is a brief overview of each repository:
+---
 
-#### 1. [StrangeLandPackage](https://github.com/Strange-Land/StrangeLandPackage)
-This Unity package contains the refactored core functionalities of StrangeLand. It is currently being used by several of our collaborators for various projects, and we are actively updating it throughout the collaboration. You can find samples in the package manager to get started.
+## Start here
 
-##### 1.1 Steering
-The **[StrangeLand Steering](https://github.com/Strange-Land/strangeland.steering)** package provides a hardware abstraction layer for steering wheels and driving input devices used in StrangeLand simulations. It exposes normalized inputs such as steering, throttle, brake, and common vehicle controls through the `SteeringWheelManager`, allowing vehicle controllers to remain independent of specific hardware SDKs. The package includes example integrations (e.g., Logitech wheels) and samples to test and debug input. Be sure to add the `SteeringWheelManager` to your `GameManagement` scene in Unity. 
+| If you want to… | Use |
+|---|---|
+| Build a new multi-person study in Unity | [StrangeLandPackage](https://github.com/Strange-Land/StrangeLandPackage) (core), plus [strangeland.steering](https://github.com/Strange-Land/strangeland.steering) and [strangeland.vehicle](https://github.com/Strange-Land/strangeland.vehicle) |
+| Connect a steering wheel, pedals or other driving input | [strangeland.steering](https://github.com/Strange-Land/strangeland.steering) |
+| Add a ready-to-drive vehicle to a scene | [strangeland.vehicle](https://github.com/Strange-Land/strangeland.vehicle) |
+| Run pedestrian–driver studies with a portable setup | [Grokwalk](https://github.com/Strange-Land/Grokwalk) |
+| Record a session and replay it from any viewpoint | [Rerun](https://github.com/Strange-Land/Rerun) |
+| Reproduce or extend an earlier study | [StrangeLand-Base](https://github.com/Strange-Land/StrangeLand-Base) (legacy, see below) |
 
-##### 1.2 Vehicle
-The **[StrangeLand Vehicle](https://github.com/Strange-Land/strangeland.vehicle)** package provides a reference vehicle implementation for StrangeLand. It includes a ready-to-use vehicle prefab with interior interaction elements, mirrors, audio, and a vehicle controller that integrates directly with the `SteeringWheelManager`. Importing the sample allows developers to quickly add a drivable vehicle to a scene and connect it to the StrangeLand interaction and spawning system while remaining fully extensible for custom vehicle setups.
+New projects should start from the **packages**: install them through Unity's Package Manager and import the samples. Setup guides live in [Docs-ReadMe](https://github.com/Strange-Land/Docs-ReadMe) and will move to [strangeland.io](https://strangeland.io).
 
-#### 2. [StrangeLand-Base](https://github.com/Strange-Land/StrangeLand-Base/tree/development)
-This is the core repository of the StrangeLand system. It contains the foundational code and assets necessary to set up and run the VR driving simulations. Start here if you're new to the StrangeLand ecosystem.
+**Requirements:** Unity [version], Windows PC with a VR-capable GPU, [supported headsets, e.g. Meta Quest 2/Pro/3]. Steering wheels supported through the steering package (Logitech examples included).
 
-#### 3. [Docs-ReadMe](https://github.com/Strange-Land/Docs-ReadMe)
-This repository houses all the documentation related to the StrangeLand project. Here you can find detailed guides, and more to help you navigate and utilize the various components of the StrangeLand system.
+---
 
-*Some Reportistries are still hosted on the originating labs Github*
-#### 4. [ReRun](https://github.com/FAR-Lab/Rerun)
-It is an addition to StrangeLand that can be used to record the various moving actors in a scene and play them back, facilitating inductive coding for the transpired interactions.
-#### 5. [Original Repository](https://github.com/FAR-Lab/CrossCulturalDriving)
-The simulator's original repository has a longer history and various issues trackers associated with it that were not migrated to the new StrangeLand-Base repository.
+## Repositories
 
-### Future Developments
+**Core packages (current)**
+- **[StrangeLandPackage](https://github.com/Strange-Land/StrangeLandPackage):** networking, participant and scenario management, data logging. Samples are available in the Package Manager.
+- **[strangeland.steering](https://github.com/Strange-Land/strangeland.steering):** a hardware abstraction layer for steering wheels and pedals. `SteeringWheelManager` exposes normalized steering, throttle, brake and controls, so vehicle code stays independent of any one SDK. Add it to your `GameManagement` scene.
+- **[strangeland.vehicle](https://github.com/Strange-Land/strangeland.vehicle):** a reference vehicle with interior, mirrors and audio, wired to `SteeringWheelManager` and the spawning system.
 
-StrangeLand is continuously evolving. Our future plans for development are divided into two main areas:
+**Companion tools**
+- **[Rerun](https://github.com/Strange-Land/Rerun):** records every moving actor in a scene and plays sessions back from any perspective, for coding and analyzing interactions.
+- **[Grokwalk](https://github.com/Strange-Land/Grokwalk):** a portable configuration for studying driver–pedestrian interaction.
+- **[StrangeHarbour](https://github.com/Strange-Land/StrangeHarbour):** [one-line description].
 
-#### 1. Studies
-We aim to expand the cultural profiling capabilities of StrangeLand by incorporating more diverse driving scenarios, pedestrians, robots, and modern forms of transportation, to studying their effects on driving in different cultural contexts. The goal is to make StrangeLand a universal tool for multiparticipant interactin research moving beyond the traffic and driving context.
+**Documentation and site**
+- **[Docs-ReadMe](https://github.com/Strange-Land/Docs-ReadMe):** guides and the [technical roadmap](https://github.com/Strange-Land/Docs-ReadMe/wiki/Technical-Improvments).
+- **[strange-land.github.io](https://github.com/Strange-Land/strange-land.github.io):** source for the documentation site.
 
-#### 2. Technical Improvements
-Several enhancements are planned to improve the fidelity and usability of the StrangeLand system. These include better hand-tracking integration, more robust network performance, and the inclusion of additional real-world driving conditions to make the simulations even more realistic. For more details, visit our [Technical Improvements](https://github.com/Strange-Land/Docs-ReadMe/wiki/Technical-Improvments) page.
+**Legacy**
+- **[StrangeLand-Base](https://github.com/Strange-Land/StrangeLand-Base)** and **[Core](https://github.com/Strange-Land/Core)**: the original monolithic simulator, used in published studies. Kept for reproducing earlier work; new projects should use the packages.
+- The simulator's original history and issue tracker remain at [FAR-Lab/CrossCulturalDriving](https://github.com/FAR-Lab/CrossCulturalDriving).
 
-### History
+**Community forks**
+- **[humanFUEL-StrangeLand](https://github.com/Strange-Land/humanFUEL-StrangeLand):** a fork maintained for pedestrian studies. Many groups keep their own forks; see *Contributing* for how to share extensions back.
 
-StrangeLand began as an experimental system developed at Cornell Tech and the Technion in Israel, aiming to understand driving culture through VR. The system has since grown into a versatile tool for driving research, capable of capturing intricate details of driver interaction in various cultural settings. The project has been validated through proof-of-concept studies in multiple locations, showcasing its potential as a powerful tool for driving behavior research.
+---
 
-We invite you to explore, contribute, and help us shape the future of autonomous driving technology by engaging with the StrangeLand project.
+## What's next: StrangeLand Commons
+
+StrangeLand is becoming **StrangeLand Commons**: one maintained platform that labs and companies can set up without help from its developers. Planned work includes connections to [CARLA](https://carla.org), Gazebo and ROS 2 so the same study can run with live people and with software agents; mixed reality for running lab studies in real places; a shared format for describing multi-party scenarios; and a shared dataset of recorded interactions.
+
+---
+
+## Contributing
+
+We welcome bug reports, feature requests and extensions, including work that started in your own fork.
+- **Questions and bugs:** open an issue in the relevant repository.
+- **Extensions:** if you've built something in a fork (a new vehicle, robot, sensor or study type), open a pull request against the package it extends, or an issue describing it, and we'll help bring it into the shared code.
+- See [CONTRIBUTING.md](https://github.com/Strange-Land/.github/blob/main/CONTRIBUTING.md) for details.
+
+All code is released under the **MIT license**.
+
+---
+
+## Citing StrangeLand
+
+If you use StrangeLand in your research, please cite:
+
+> D. Goedicke, C. Zolkov, N. Friedman, T. Wise, A. Parush and W. Ju, "Strangers in a Strange Land: New Experimental System for Understanding Driving Culture Using VR," *IEEE Transactions on Vehicular Technology*, vol. 71, no. 4, pp. 3399–3413, 2022. [doi:10.1109/TVT.2022.3152611](https://doi.org/10.1109/TVT.2022.3152611)
+
+```bibtex
+@article{goedicke2022strangers,
+  title   = {Strangers in a Strange Land: New Experimental System for Understanding Driving Culture Using {VR}},
+  author  = {Goedicke, David and Zolkov, Carmel and Friedman, Natalie and Wise, Talia and Parush, Avi and Ju, Wendy},
+  journal = {IEEE Transactions on Vehicular Technology},
+  volume  = {71},
+  number  = {4},
+  pages   = {3399--3413},
+  year    = {2022},
+  doi     = {10.1109/TVT.2022.3152611}
+}
+```
+
+If you use Rerun, please also cite *ReRun: Enabling Multi-Perspective Analysis of Driving Interaction in VR* (HRI 2023, [doi:10.1145/3568294.3580211](https://doi.org/10.1145/3568294.3580211)).
+
+---
+
+## History
+
+StrangeLand began at Cornell Tech and the Technion in Israel, to compare how drivers in different countries negotiate the same intersection. It has since grown to cover pedestrians, cyclists, robots, flying vehicles and on-road studies, and is used by research groups and industry researchers in the United States, Europe and Asia.
